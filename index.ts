@@ -25,7 +25,7 @@ program
 program
   .command('createFHIRBundle <filePath> <outputPath> <description> [ipUrl]')
   .description('Creates a FHIR bundle as a JSON file from an input .cql file')
-  .action((filePath, outputPath, description, ipUrl = 'http://localhost:8080/fhir/Library/') => {
+  .action((filePath, outputPath, description, ipUrl = 'http://localhost:8080/fhir/') => {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       // Extract library name and version from the content using regex
